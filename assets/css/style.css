@@ -2,6 +2,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* TBD */
+/* Add fifth image and make first image larger than others. (initially misread as when hover mouse over image then image gets bigger, keeping anyways).*/
+/* Get site to scale with smaller screens */
+/* Upload photo which might throw off everythign aligned so far */
+/* Setup anchor tags for images in work section*/
+/* reorganize CSS to be more organized, consolidate where possible */
+
 :root {
     --primaryrgb: #720303;
     --secondaryrgb: #d2e7ff;
@@ -17,13 +24,12 @@ body {
     background-color: #65655e;
 }
 
-/* colors are still up in the air, added variables to make changing color pallete simpler*/
+/* colors are still up in the air,variables make changing color pallete simpler*/
 header {
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primaryrgb);
+    background-image: linear-gradient(180deg, var(--primaryrgb), #310101);
     padding-top: 20px;
     padding-right: 20px;
     border-top: 0px;
@@ -32,6 +38,7 @@ header {
     border-bottom: 2px;
     border-style: solid;
     border-color: var(--tertiaryrgb);
+    
 }
 
 h1 {
@@ -69,6 +76,10 @@ ul li {
 section > h2{
     font-size: 175%;
     text-align: right;
+    padding-right: 10px;
+    border-right:5px solid var(--secondaryrgb);
+    border-radius: 2px;
+    margin-bottom: 50px;
 }
 
 /* flexboxes for main content, headers to the left and related content to the right */
@@ -78,10 +89,35 @@ section > h2{
     display: flex;
 }
 
+.contact-me h2{
+    margin-bottom: 0px;
+}
+
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 30px;
+    align-content: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 20px;
     color: var(--secondaryrgb);
+}
+
+
+/* Got the images how I want, sort of, but just realized that I need to have FIVE images with the first one being larger than the others */
+
+.work img {
+    border: 2px solid var(--tertiaryrgb);
+    margin: 10px;
+}
+
+.app {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.work img:hover {
+    transform: scale(1.05, 1.07);
 }
