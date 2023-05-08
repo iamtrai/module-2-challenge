@@ -5,7 +5,6 @@
 /* TBD */
 /* Add fifth image and make first image larger than others. (initially misread as when hover mouse over image then image gets bigger, keeping anyways).*/
 /* Get site to scale with smaller screens */
-/* Upload photo which might throw off everythign aligned so far */
 /* Setup anchor tags for images in work section*/
 /* reorganize CSS to be more organized, consolidate where possible */
 
@@ -25,6 +24,7 @@ body {
 }
 
 /* colors are still up in the air,variables make changing color pallete simpler*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -50,6 +50,7 @@ h1 {
 }
 
 /* May need to alter nav positioning for larger font size, not fully understanding how the position attribute works yet, study up */
+
 nav {
     min-width: 300px;
     color: var(--secondaryrgb);
@@ -63,16 +64,28 @@ nav ul{
     font-size: 125%;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: var(--secondaryrgb);
+    padding: 20px;
 }
 
 ul li {
     display: inline;
 }
 
+/* added image of face for cover background image to fulfill criteria */
+.headshot { 
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(../images/avipng.png);
+    background-size: cover;
+    background-position: center;
+}
+
 /* font size for h2 headers in main */
+
 section > h2{
     font-size: 175%;
     text-align: right;
@@ -83,13 +96,14 @@ section > h2{
 }
 
 /* flexboxes for main content, headers to the left and related content to the right */
+
 .about-me,
 .work,
 .contact-me {
     display: flex;
 }
 
-.contact-me h2{
+.contact-me h2 {
     margin-bottom: 0px;
 }
 
@@ -97,27 +111,30 @@ main {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-top: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
     margin-bottom: 20px;
     color: var(--secondaryrgb);
 }
 
-
 /* Got the images how I want, sort of, but just realized that I need to have FIVE images with the first one being larger than the others */
+
+/* As expected, adding fifth image complicated image layout and I am completely lost on how to fix, will need tutoring. */
 
 .work img {
     border: 2px solid var(--tertiaryrgb);
     margin: 10px;
+    flex: 1 1 200px;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .app {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
+    justify-content: center;
 }
 
-.work img:hover {
-    transform: scale(1.05, 1.07);
-}
