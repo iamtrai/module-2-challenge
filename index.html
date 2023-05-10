@@ -21,10 +21,12 @@
         </nav>
     </header>
 
+    <section class="headshot"></section>
+
     <main>
-        <section class="headshot"></section>
 
         <section class="content">
+            <!-- About Me Content -->
             <section id="about-me" class="about-me">
                 <h2>About Me</h2>
                 <section class="about-me-content">
@@ -33,23 +35,27 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ea quo eaque odit eum ipsa quae deserunt nisi ab. Quidem voluptates aperiam molestias quo voluptatibus quibusdam ab obcaecati architecto natus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, omnis? Magnam et quam, impedit, in quasi laborum, quas accusantium culpa id libero ipsam aliquam. Nisi accusantium dolores voluptatibus dignissimos et. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, delectus veniam soluta at ipsam consequuntur quo ad voluptates quibusdam deleniti ab autem cumque molestiae quis officia unde voluptate itaque dolorem.</p>
                 </section>
             </section>
-
+            <!-- Work Content -->
             <section id="work" class="work">
                 <h2>Work</h2>
+
                 <section class="appcontent">
-                    <!-- replaced img tags with anchors so that they are clickable and lead to deployed apps, but layout of images was utterly ddestroyed, cannot figure out how to get it how i want -->
+                    <!-- replaced img tags with anchors so that they are clickable and lead to deployed apps, organized as well as I could -->
                     <section class="bigapp">  
-                        <a  target="_blank" href="https://iamtrai.github.io/horiseon-site/"><img src="/assets/images/app0png.png" alt="grey metal texture" /></a>
+                        <a  target="_blank" href="https://iamtrai.github.io/horiseon-site/"><img src="/assets/images/app0png.png" alt="hexagonal grid with blue lights" /><h3>Horiseon</h3></a>
                     </section>
+                    <!-- When adding "title of app" to display on app img/a, position relative must be to a element, and h3 position absolute -->
+                    <!-- h3 element within <a> tags -->
                     <section class="app">  
-                        <a href="#"><img src="./assets/images/app4png.png" alt="gold metal texture"/></a>  
-                        <a href="#"><img src="./assets/images/app2png.png" alt="black wood lattice"/></a>
-                        <a href="#"><img src="./assets/images/apppng.png" alt="carbon fiber texture"/></a>
-                        <a href="#"><img src="./assets/images/app3png.png" alt="carbon fiber texture"/></a>
+                        <a href="#"><img src="./assets/images/app4png.png" alt="gold and black diamond design"/><h3>TBD</h3></a>  
+                        <a href="#"><img src="./assets/images/app2png.png" alt="black wood lattice"/><h3>TBD</h3></a>
+                        <a href="#"><img src="./assets/images/apppng.png" alt="carbon fiber texture"/><h3>TBD</h3></a>
+                        <a href="#"><img src="./assets/images/app3png.png" alt="red wood grain texture"/><h3>TBD</h3></a>
                     </section>
                 </section>
-            </section>
 
+            </section>
+            <!-- Contact Me Content -->
             <section id="contact-me" class="contact-me">
                 <h2>Contact Me</h2>
                 <ul>

@@ -3,27 +3,27 @@
 }
 
 /* TBD 
-get work anchor imgaes to line up and scale correctly;
-Get site to scale with smaller screens;
 reorganize CSS to be more organized, consolidate where possible */
 
 :root {
     --primaryrgb: #720303;
     --secondaryrgb: #d2e7ff;
     --tertiaryrgb: #c5b41e;
+    --bgcolor: #65655e;
     
 }
 
 body {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #65655e;
+    background-color: var(--bgcolor);
 }
 
-/* colors are still up in the air,variables make changing color pallete simpler*/
+/* Variables make changing color pallete simpler*/
 
+/* Header Content Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,6 @@ header {
     border-bottom: 2px;
     border-style: solid;
     border-color: var(--tertiaryrgb);
-    
 }
 
 h1 {
@@ -48,11 +47,8 @@ h1 {
     padding-left: 40px;
 }
 
-/* May need to alter nav positioning for larger font size, not fully understanding how the position attribute works yet, study up */
-
 nav {
     color: var(--secondaryrgb);
-    display: block;
     margin: 10px;
 }
 
@@ -68,10 +64,9 @@ nav a {
 }
 
 ul li {
-    display: inline;
+    display: inline-flex;
 }
 
-/* added image of face for cover background image to fulfill criteria */
 .headshot { 
     height: 857px;
     width: 100%;
@@ -81,15 +76,25 @@ ul li {
     background-position: center;
 }
 
-/* font size for h2 headers in main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 20px;
+    color: var(--secondaryrgb);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 
 section > h2{
     font-size: 175%;
     text-align: right;
     padding-right: 10px;
     border-right:5px solid var(--secondaryrgb);
-    border-radius: 2px;
-    width: 150px;
+    border-radius: 5px;
+    min-width: 150px;
 }
 
 /* flexboxes for main content, headers to the left and related content to the right */
@@ -102,33 +107,19 @@ section > h2{
     margin: 20px;
 }
 
+/* About Me Content Styling*/
 .about-me-content {
     flex: 1 1 200px;
     flex-direction: column;
     padding-left: 20px;
 }
 
-.contact-me h2 {
-    margin-bottom: 0px;
-}
-
-main {
+/* Work Content Styling */
+.appcontent{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    margin-bottom: 20px;
-    color: var(--secondaryrgb);
-}
-
-.content {
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-/* replaced img tags with anchors so that they are clickable and lead to deployed apps, but layout of images was utterly ddestroyed, cannot figure out how to get it how i want */
-
-.appcontent{
     max-width: 1200px;
+    margin: auto;
 }
 .app,
 .bigapp  {
@@ -144,18 +135,130 @@ main {
     flex-wrap: wrap;
     border: 3px solid var(--tertiaryrgb);
     flex: 1 1 200px;
-    max-width: 400px;
+    max-height: 225px;
 }
 
 .bigapp img {
     display: flex;
     flex-wrap: wrap;
     border: 3px solid var(--tertiaryrgb);
-    flex-shrink: 2;
-    max-width: 700px;
+    max-height: 300px;
 }
 
 .app a,
 .bigapp a{
     margin: 5px;
+}
+
+.appcontent a{
+    position: relative;
+}
+
+.appcontent h3{
+    font-size: 150%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: var(--secondaryrgb);
+    background-color: var(--tertiaryrgb);
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Contact Me Content Styling */
+
+.contact-me h2 {
+    max-width: 150px;
+}
+
+.contact-me ul li {
+    padding: 40px;
+    font-size: 110%;
+}
+
+.contact-me ul {
+    margin: auto;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: var(--secondaryrgb);
+}
+
+/* Resized screen restyling */
+
+@media screen and (max-width: 1250px){
+    .main {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .bigapp img {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-me,
+    .work,
+    .contact-me {
+        flex-direction: column;
+    }   
+
+    section > h2 {
+        border-right: none;
+        border-bottom: 5px solid var(--secondaryrgb);
+        text-align: center;
+    }
+
+    .contact-me h2{
+        max-width: none;
+    }
+
+    .contact-me ul {
+        text-align: center;
+    }
+    .contact-me ul li {
+        padding: 10px;
+    }
+    .appcontent {
+        padding-top: 5px;
+    }
+    
+    .appcontent img {
+        max-width: 100%;
+    }
+
+    .about-me-content {
+        padding-left: 0px;
+        padding-top: 5px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header h1 {
+        padding: 20px;
+    }
+    nav {
+        background-color: var(--bgcolor);;
+        min-width: 100%;
+        margin: auto;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .headshot {
+        max-height: 500px;
+    }
 }
