@@ -8,4 +8,4 @@ This website was coded from scratch and will be deployed as a portoflio for myse
 
 ### Link to Deployed Application
 
-https://iamtrai.github.io/module-2-challenge/
+https://iamtrai.github.io/traivon-terry-portfolio/
