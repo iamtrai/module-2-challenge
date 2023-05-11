@@ -2,8 +2,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* TBD 
-reorganize CSS to be more organized, consolidate where possible */
 
 :root {
     --primaryrgb: #720303;
@@ -260,5 +258,13 @@ section > h2{
 
     .headshot {
         max-height: 500px;
+    }
+
+    .bigapp a{
+       height: min-content;
+    }
+
+    .appcontent .bigapp {
+        max-height: 100%;
     }
 }
